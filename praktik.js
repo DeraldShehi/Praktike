@@ -43,6 +43,21 @@ if (shfaqAlert === true) {
 
 // 5. Nga userat ktheni nje array tjt vetem me moshat e tyre : [24,30,22,23,17] gjithashtu gjeni dhe moshen mesatare te ketij array te gjeneruar me numra.
 
+let arrayMoshat = [];
+users.forEach((user) => {
+    arrayMoshat.push(user[2]);
+});
+console.log(arrayMoshat);
+
+function mesatarjaMoshave() {
+    let shuma = 0;
+    for (let mosha of arrayMoshat) {
+        shuma += mosha;
+        shuma / arrayMoshat.length;
+        return console.log("Mesatarja moshave eshte :", shuma);
+    };
+};
+mesatarjaMoshave();
 
 // 6. Te ndryshohet mosha e nje useri te marre nga argumenti :
 //    Shembull : `ndryshoUserin(2,23)` => Nga 22 vjec do behet 23 , tregojeni me log.
